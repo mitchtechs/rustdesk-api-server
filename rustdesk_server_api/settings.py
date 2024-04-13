@@ -102,15 +102,15 @@ DATABASES = {
     }
 }
 if DATABASE_TYPE == 'MYSQL' and MYSQL_DBNAME!='-' and MYSQL_USER!= '-' and MYSQL_PASSWORD!='-':
-    # 简单通过数据库名、账密信息过滤下，防止用户未配置mysql却使用mysql
+    # Simply pass the database name, Filter the account information，Prevent users from not configuring mysql, But use mysql
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': MYSQL_DBNAME,               # 数据库名
-        'HOST': MYSQL_HOST,                 # 数据库服务器IP
-        'USER': MYSQL_USER,                 # 数据库用户名
-        'PASSWORD': MYSQL_PASSWORD,         # 数据库密码
-        'PORT': MYSQL_PORT,                 # 端口
+        'NAME': MYSQL_DBNAME,               # DB Name
+        'HOST': MYSQL_HOST,                 # Host IP
+        'USER': MYSQL_USER,                 # DB User
+        'PASSWORD': MYSQL_PASSWORD,         # DB Pass
+        'PORT': MYSQL_PORT,                 # MySQL Port (default 3306)
         'OPTIONS': {'charset': 'utf8'},
     }
 }
@@ -139,7 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 #LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = 'Europe/London'
 
 USE_I18N = True
 

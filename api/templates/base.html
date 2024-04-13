@@ -17,9 +17,9 @@
     <script src={% static "layui/layui.js" %}></script>
     <script>
         layui.use('element', function () {
-            var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+            var element = layui.element; //navigation hover effect、Secondary Menu and other functions，Need to depend on element module
 
-            //监听导航点击
+            //Listen for navigation clicks
             element.on('nav(demo)', function (elem) {
                 //console.log(elem)
                 layer.msg(elem.text());
@@ -28,19 +28,19 @@
     </script>
 
     <ul class="layui-nav">
-        <li class="layui-nav-item"><a href="/">{% trans "首页" %}</a></li>
+        <li class="layui-nav-item"><a href="/">{% trans "Home Page" %}</a></li>
         {% if u.is_admin %}
-        <li class="layui-nav-item"><a href="/api/work?show_type=admin">{% trans "所有设备" %}</a>
+        <li class="layui-nav-item"><a href="/api/work?show_type=admin">{% trans "All Items" %}</a>
         </li>
         {% endif %}
-        <li class="layui-nav-item"><a href="/api/share">{% trans "分享" %}</a></li>
-        <li class="layui-nav-item"><a href="/webui" target="_blank">{% trans "网页控制" %}</a></li>
+        <li class="layui-nav-item"><a href="/api/share">{% trans "Share" %}</a></li>
+        <li class="layui-nav-item"><a href="/webui" target="_blank">{% trans "Web Control" %}</a></li>
 
         {% if u.is_admin %}
-        <li class="layui-nav-item"><a href="/admin" target="_blank">{% trans "管理后台" %}</a>
+        <li class="layui-nav-item"><a href="/admin" target="_blank">{% trans "Admin" %}</a>
         </li>
         {% endif %}
-        <li class="layui-nav-item"><a href="/api/user_action?action=logout" target="_blank">{% trans "退出" %}</a></li>
+        <li class="layui-nav-item"><a href="/api/user_action?action=logout" target="_blank">{% trans "Logout" %}</a></li>
     </ul>
 
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
